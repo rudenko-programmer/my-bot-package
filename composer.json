@@ -1,0 +1,54 @@
+{
+    "name": "rudenko-programmer/my-bot-package",
+    "description": "",
+    "keywords": [
+        "rudenko-programmer",
+        "my-bot-package"
+    ],
+    "homepage": "https://github.com/rudenko-programmer/my-bot-package",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Maksym",
+            "email": "rudenko.programmer@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RudenkoProgrammer\\MyBotPackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RudenkoProgrammer\\MyBotPackage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RudenkoProgrammer\\MyBotPackage\\MyBotPackageServiceProvider"
+            ],
+            "aliases": {
+                "MyBotPackage": "RudenkoProgrammer\\MyBotPackage\\MyBotPackageFacade"
+            }
+        }
+    }
+}
